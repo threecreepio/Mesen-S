@@ -31,10 +31,6 @@
 			this.tabMain = new System.Windows.Forms.TabControl();
 			this.tpgGeneral = new System.Windows.Forms.TabPage();
 			this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-			this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-			this.nudRunAheadFrames = new Mesen.GUI.Controls.MesenNumericUpDown();
-			this.lblRunAheadFrames = new System.Windows.Forms.Label();
-			this.lblRunAhead = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
 			this.nudTurboSpeed = new Mesen.GUI.Controls.MesenNumericUpDown();
@@ -58,6 +54,7 @@
 			this.dtpBsxCustomTime = new System.Windows.Forms.DateTimePicker();
 			this.tpgAdvanced = new System.Windows.Forms.TabPage();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+			this.chkAllowInvalidInput = new Mesen.GUI.Controls.ctrlRiskyOption();
 			this.chkEnableRandomPowerOnState = new Mesen.GUI.Controls.ctrlRiskyOption();
 			this.cboRamPowerOnState = new System.Windows.Forms.ComboBox();
 			this.lblRamPowerOnState = new System.Windows.Forms.Label();
@@ -75,11 +72,9 @@
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.nudGsuClockSpeed = new Mesen.GUI.Controls.MesenNumericUpDown();
 			this.lblGsuClockSpeed = new System.Windows.Forms.Label();
-			this.chkAllowInvalidInput = new Mesen.GUI.Controls.ctrlRiskyOption();
 			this.tabMain.SuspendLayout();
 			this.tpgGeneral.SuspendLayout();
 			this.tableLayoutPanel4.SuspendLayout();
-			this.flowLayoutPanel5.SuspendLayout();
 			this.flowLayoutPanel9.SuspendLayout();
 			this.flowLayoutPanel6.SuspendLayout();
 			this.flowLayoutPanel10.SuspendLayout();
@@ -132,8 +127,6 @@
 			this.tableLayoutPanel4.ColumnCount = 2;
 			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
 			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel5, 1, 4);
-			this.tableLayoutPanel4.Controls.Add(this.lblRunAhead, 0, 4);
 			this.tableLayoutPanel4.Controls.Add(this.label1, 0, 3);
 			this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel9, 1, 1);
 			this.tableLayoutPanel4.Controls.Add(this.lblTurboSpeed, 0, 1);
@@ -145,78 +138,15 @@
 			this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
 			this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-			this.tableLayoutPanel4.RowCount = 6;
-			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel4.RowCount = 5;
 			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.tableLayoutPanel4.Size = new System.Drawing.Size(431, 258);
 			this.tableLayoutPanel4.TabIndex = 0;
-			// 
-			// flowLayoutPanel5
-			// 
-			this.flowLayoutPanel5.AutoSize = true;
-			this.flowLayoutPanel5.Controls.Add(this.nudRunAheadFrames);
-			this.flowLayoutPanel5.Controls.Add(this.lblRunAheadFrames);
-			this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.flowLayoutPanel5.Location = new System.Drawing.Point(111, 108);
-			this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
-			this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-			this.flowLayoutPanel5.Size = new System.Drawing.Size(320, 27);
-			this.flowLayoutPanel5.TabIndex = 20;
-			// 
-			// nudRunAheadFrames
-			// 
-			this.nudRunAheadFrames.DecimalPlaces = 0;
-			this.nudRunAheadFrames.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.nudRunAheadFrames.IsHex = false;
-			this.nudRunAheadFrames.Location = new System.Drawing.Point(3, 3);
-			this.nudRunAheadFrames.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-			this.nudRunAheadFrames.MaximumSize = new System.Drawing.Size(10000, 20);
-			this.nudRunAheadFrames.Minimum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-			this.nudRunAheadFrames.MinimumSize = new System.Drawing.Size(0, 21);
-			this.nudRunAheadFrames.Name = "nudRunAheadFrames";
-			this.nudRunAheadFrames.Size = new System.Drawing.Size(48, 21);
-			this.nudRunAheadFrames.TabIndex = 1;
-			this.nudRunAheadFrames.Value = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-			// 
-			// lblRunAheadFrames
-			// 
-			this.lblRunAheadFrames.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.lblRunAheadFrames.AutoSize = true;
-			this.lblRunAheadFrames.Location = new System.Drawing.Point(57, 7);
-			this.lblRunAheadFrames.Name = "lblRunAheadFrames";
-			this.lblRunAheadFrames.Size = new System.Drawing.Size(236, 13);
-			this.lblRunAheadFrames.TabIndex = 2;
-			this.lblRunAheadFrames.Text = "frames (reduces input lag, increases CPU usage)";
-			// 
-			// lblRunAhead
-			// 
-			this.lblRunAhead.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.lblRunAhead.AutoSize = true;
-			this.lblRunAhead.Location = new System.Drawing.Point(3, 115);
-			this.lblRunAhead.Name = "lblRunAhead";
-			this.lblRunAhead.Size = new System.Drawing.Size(64, 13);
-			this.lblRunAhead.TabIndex = 19;
-			this.lblRunAhead.Text = "Run Ahead:";
 			// 
 			// label1
 			// 
@@ -553,6 +483,16 @@
 			this.tableLayoutPanel2.Size = new System.Drawing.Size(431, 258);
 			this.tableLayoutPanel2.TabIndex = 5;
 			// 
+			// chkAllowInvalidInput
+			// 
+			this.chkAllowInvalidInput.Checked = false;
+			this.tableLayoutPanel2.SetColumnSpan(this.chkAllowInvalidInput, 2);
+			this.chkAllowInvalidInput.Location = new System.Drawing.Point(0, 75);
+			this.chkAllowInvalidInput.Name = "chkAllowInvalidInput";
+			this.chkAllowInvalidInput.Size = new System.Drawing.Size(400, 24);
+			this.chkAllowInvalidInput.TabIndex = 8;
+			this.chkAllowInvalidInput.Text = "Allow invalid input (e.g Down + Up or Left + Right at the same time)";
+			// 
 			// chkEnableRandomPowerOnState
 			// 
 			this.chkEnableRandomPowerOnState.Checked = false;
@@ -817,16 +757,6 @@
 			this.lblGsuClockSpeed.TabIndex = 0;
 			this.lblGsuClockSpeed.Text = "Super FX clock speed (%):";
 			// 
-			// chkAllowInvalidInput
-			// 
-			this.chkAllowInvalidInput.Checked = false;
-			this.tableLayoutPanel2.SetColumnSpan(this.chkAllowInvalidInput, 2);
-			this.chkAllowInvalidInput.Location = new System.Drawing.Point(0, 75);
-			this.chkAllowInvalidInput.Name = "chkAllowInvalidInput";
-			this.chkAllowInvalidInput.Size = new System.Drawing.Size(400, 24);
-			this.chkAllowInvalidInput.TabIndex = 8;
-			this.chkAllowInvalidInput.Text = "Allow invalid input (e.g Down + Up or Left + Right at the same time)";
-			// 
 			// frmEmulationConfig
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -846,8 +776,6 @@
 			this.tpgGeneral.PerformLayout();
 			this.tableLayoutPanel4.ResumeLayout(false);
 			this.tableLayoutPanel4.PerformLayout();
-			this.flowLayoutPanel5.ResumeLayout(false);
-			this.flowLayoutPanel5.PerformLayout();
 			this.flowLayoutPanel9.ResumeLayout(false);
 			this.flowLayoutPanel9.PerformLayout();
 			this.flowLayoutPanel6.ResumeLayout(false);
@@ -913,10 +841,6 @@
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 		private Controls.ctrlRiskyOption chkEnableRandomPowerOnState;
 		private Controls.ctrlRiskyOption chkEnableStrictBoardMappings;
-	  private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-	  private Controls.MesenNumericUpDown nudRunAheadFrames;
-	  private System.Windows.Forms.Label lblRunAheadFrames;
-	  private System.Windows.Forms.Label lblRunAhead;
 	  private System.Windows.Forms.TabPage tpgBsx;
 	  private System.Windows.Forms.GroupBox grpBsxDateTime;
 	  private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
